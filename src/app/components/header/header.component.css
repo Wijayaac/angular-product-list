@@ -1,0 +1,35 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    width: 100%;
+    background-color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 10px 0 10px 0 grey;
+}
+
+.header-wrapper {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.header-link {
+    background-color: green;
+    padding: 10px 20px;
+    display: block;
+    color: white;
+    font-weight: 600;
+    transition: all 400ms, 400ms ease-out;
+}
+
+.header-link:hover {
+    opacity: 0.8;
+}

@@ -1,0 +1,18 @@
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    /* grid-template-columns: repeat(2, 1fr); */
+}
+
+app-product-item {
+    flex: 0 0 48%;
+    max-width: 48%;
+}
+
+@media (min-width: 992px) {
+    app-product-item {
+        flex: 0 0 19.2%;
+        max-width: 19.2%;
+    }
+}

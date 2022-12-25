@@ -1,5 +1,7 @@
 <div class="product">
-    <h3>{{product.title || 'product name'}}</h3>
-    <p class="product-price">$ {{product.price || 0}}</p>
+    <div class="product-header">
+        <p class="product-title">{{product.title || 'product name'}}</p>
+        <p class="product-price">$ {{product.price || 0}}</p>
+    </div>
     <button (click)="onDelete(product)">Delete</button>
 </div>
