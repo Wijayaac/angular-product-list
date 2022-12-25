@@ -20,4 +20,11 @@ export class ProductsService {
   getProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(this.API_URL);
   }
+
+  deleteProduct(product: Product): Observable<Product> {
+    const URL = `${this.API_URL}/${product.id}`;
+    console.log('here');
+
+    return this.http.delete<Product>(URL);
+  }
 }

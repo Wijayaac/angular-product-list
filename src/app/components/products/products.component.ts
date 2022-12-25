@@ -17,4 +17,10 @@ export class ProductsComponent implements OnInit {
       .getProducts()
       .subscribe((products) => (this.products = products));
   }
+  deleteProduct(product: Product) {
+    this.productService.deleteProduct(product).subscribe(() => {
+      alert(`Product ${product.title} has been deleted`);
+      this.products = this.products.filter((p) => p.id !== product.id);
+    });
+  }
 }
