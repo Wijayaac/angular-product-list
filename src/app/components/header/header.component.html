@@ -3,6 +3,6 @@
         <a [routerLink]="['/']" class="header-logo">
             <h1>Product List</h1>
         </a>
-        <a [routerLink]="['/add-product']" class="header-link">Add Product</a>
+        <a *ngIf="hasRoute('/')" [routerLink]="['/add-product']" class="header-link">Add Product</a>
     </div>
 </header>
