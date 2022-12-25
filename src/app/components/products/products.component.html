@@ -1,0 +1,5 @@
+<div class="products" infinite-scroll [infiniteScrollDistance]="1" [infiniteScrollThrottle]="500"
+    (scrolled)="onScroll()">
+    <app-product-item *ngFor="let product of products" [product]="product"
+        (onDeleteProduct)="deleteProduct(product)"></app-product-item>
+</div>
