@@ -1,0 +1,23 @@
+.product {
+    padding: 10px;
+    background-color: #e1e1e1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.product-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.product-header {
+    margin-bottom: 20px;
+}
+
+.product button {
+    background-color: red;
+    color: white;
+}

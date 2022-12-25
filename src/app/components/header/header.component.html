@@ -1,6 +1,8 @@
 <header>
-    <div class="header-wrapper" style="display: flex;justify-content: space-between;align-items: center;">
-        <h1>Product List</h1>
-        <a [routerLink]="['/add-product']" routerLinkActive="router-link-active">Add Product</a>
+    <div class="header-wrapper">
+        <a [routerLink]="['/']" class="header-logo">
+            <h1>Product List</h1>
+        </a>
+        <a *ngIf="hasRoute('/')" [routerLink]="['/add-product']" class="header-link">Add Product</a>
     </div>
 </header>
