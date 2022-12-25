@@ -9,14 +9,22 @@ import { Product } from 'src/app/Product';
   styleUrls: ['./products.component.css'],
 })
 export class ProductsComponent implements OnInit {
+  page = 1;
   products: Product[] = [];
 
   constructor(private productService: ProductsService) {}
   ngOnInit(): void {
     this.productService
-      .getProducts()
+      .getProducts(this.page)
       .subscribe((products) => (this.products = products));
   }
+
+  onScroll(): void {
+    this.productService.getProducts(++this.page).subscribe((products) => {
+      this.products.push(...products);
+    });
+  }
+
   deleteProduct(product: Product) {
     this.productService.deleteProduct(product).subscribe(() => {
       alert(`Product ${product.title} has been deleted`);
