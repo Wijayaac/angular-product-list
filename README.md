@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
 
+## Local json Database
+
+Run `npm run database` for a local database. Navigate to `http://localhost:5000/`. This database using json-server npm library. so it need to run with another terminal alongside with Angular Development server.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
